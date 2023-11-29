@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Confirmación de Registro</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">Universidad Mariano Galvez de Guatemala</a>
+    </nav>
+    <div class="container">
+        <h2>Confirmación de Registro</h2>
+        <p>¡Gracias por registrarte! Aquí están los detalles de tu registro:</p>
+        <ul>
+            <li>Nombre: <span id="nombre"></span></li>
+            <li>Correo electrónico: <span id="correo"></span></li>
+            <li>Curso: <span id="curso"></span></li>
+        </ul>
+        <p>Puedes acceder al curso utilizando tu nombre de usuario y la contraseña 2023.</p>
+        <a class="btn btn-primary" href="curso1.html" role="button">Acceder al Curso</a>
+    </div>
+    <script>
+        var usuario = JSON.parse(localStorage.getItem('usuario'));
+        document.getElementById('nombre').textContent = usuario.nombre;
+        document.getElementById('correo').textContent = usuario.correo;
+        document.getElementById('curso').textContent = usuario.curso;
+    </script>
+</body>
+</html>

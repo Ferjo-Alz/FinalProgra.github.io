@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Resultados de la Evaluación</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">Universidad Mariano Galvez de Guatemala</a>
+    </nav>
+    <div class="container">
+        <h2>Resultados de la Evaluación</h2>
+        <p>Tu calificación es: <span id="calificacion"></span></p>
+        <a class="btn btn-primary" href="curso1.html" role="button">Volver a pagina de inicio</a>
+    </div>
+    <script>
+        var calificacion = localStorage.getItem('calificacion');
+        document.getElementById('calificacion').textContent = calificacion;
+    </script>
+</body>
+</html>
